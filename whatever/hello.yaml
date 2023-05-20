@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: time-waster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: time-waster
+  template:
+    metadata:
+      labels:
+        app: time-waster
+    spec:
+      containers:
+      - name: where-time-dies
+        image: alpine:latest
+        command: ["sleep"]
+        args: ["3600"]
