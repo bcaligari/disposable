@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: time-waster
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: time-waster
@@ -16,4 +16,4 @@ spec:
       - name: where-time-dies
         image: alpine:latest
         command: ["sleep"]
-        args: ["3600"]
+        args: ["7200"]
